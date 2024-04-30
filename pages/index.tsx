@@ -12,6 +12,7 @@ import {
   ParsedEvent,
   ReconnectInterval,
 } from 'eventsource-parser';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
