@@ -31,9 +31,9 @@ const Home: NextPage = () => {
 
   const prompt = `Generate 3 ${
     vibe === 'Casual' ? 'relaxed' : vibe === 'Funny' ? 'silly' : 'Professional'
-  } twitter biographies with no hashtags and clearly labeled "1.", "2.", and "3.". Only return these 3 twitter bios, nothing else. ${
-    vibe === 'Funny' ? 'Make the biographies humerous' : ''
-  }Make sure each generated biography is less than 300 characters, has short sentences that are found in Twitter bios, and feel free to use this context as well: ${bio}${
+  } original excuses with no hashtags and clearly labeled "1.", "2.", and "3.". Only return these 3 excuses, nothing else. ${
+    vibe === 'Funny' ? 'Make the excuses humerous' : ''
+  }Make sure each generated excuse is less than 300 characters, and feel free to use this context as well: ${bio}${
     bio.slice(-1) === '.' ? '' : '.'
   }`;
 
@@ -108,17 +108,17 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Twitter Bio Generator</title>
+        <title>Original Excuse Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
-          <b>96,434</b> bios generated so far
+          <b>100</b> original excuses generated so far
         </p>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using AI
+          Generate your next excuse to successfully avoid your next commitment
         </h1>
         <div className="mt-7">
           <Toggle isGPT={isGPT} setIsGPT={setIsGPT} />
@@ -134,8 +134,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Drop in your job{' '}
-              <span className="text-slate-500">(or your favorite hobby)</span>.
+              In one sentence, tell me your current full-time job {' '}
             </p>
           </div>
           <textarea
@@ -143,7 +142,7 @@ const Home: NextPage = () => {
             onChange={(e) => setBio(e.target.value)}
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
-            placeholder={'e.g. Amazon CEO'}
+            placeholder={'e.g. MIT full-time undergraduate student'}
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
@@ -158,7 +157,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate your bio &rarr;
+              Generate your excuse &rarr;
             </button>
           )}
           {loading && (
@@ -184,7 +183,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bios
+                  Your excuses are here!
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -197,7 +196,7 @@ const Home: NextPage = () => {
                         className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                         onClick={() => {
                           navigator.clipboard.writeText(generatedBio);
-                          toast('Bio copied to clipboard', {
+                          toast('Excuse copied to clipboard, run to iMessage', {
                             icon: '✂️',
                           });
                         }}

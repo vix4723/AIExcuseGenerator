@@ -20,12 +20,7 @@ const handler = async (req: Request): Promise<Response> => {
   console.log({ prompt });
 
   const payload: OpenAIStreamPayload = {
-<<<<<<< HEAD
-    model: 'dall-e-3',
-    prompt: prompt,
-    n: 1,  // Number of images to generate.
-=======
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-turbo',
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.7,
     top_p: 1,
@@ -34,7 +29,6 @@ const handler = async (req: Request): Promise<Response> => {
     max_tokens: 200,
     stream: true,
     n: 1,
->>>>>>> parent of ab873f7 (updated the openai api)
   };
 
   const stream = await OpenAIStream(payload);
