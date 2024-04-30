@@ -12,17 +12,10 @@ export default function Toggle({ isGPT, setIsGPT }: any) {
         as="span"
         className="mr-3 text-sm flex justify-center gap-2 items-center"
       >
-        <Image
-          src="/mistral-logo.jpeg"
-          width={25}
-          height={25}
-          alt="1 icon"
-          className={`${isGPT && 'opacity-50'}`}
-        />
         <span
           className={`font-medium ${isGPT ? 'text-gray-400' : 'text-gray-900'}`}
         >
-          Mixtral
+        OFF (it won't work)
         </span>{' '}
       </Switch.Label>
       <Switch
@@ -50,7 +43,7 @@ export default function Toggle({ isGPT, setIsGPT }: any) {
             !isGPT ? 'text-gray-400' : 'text-gray-900'
           }`}
         >
-          GPT-3.5
+          DALL-E
         </span>{' '}
         <Image
           src="/openai-logo.jpeg"
