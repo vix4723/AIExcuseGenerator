@@ -5,22 +5,30 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate your next pixel art profile pic in seconds."
+            content="Generate your next Twitter bio in seconds."
           />
-          <meta property="og:site_name" content="pixelprofile.io" />
+          <meta property="og:site_name" content="twitterbio.io" />
           <meta
             property="og:description"
-            content="Generate your next pixel art profile pic in seconds."
+            content="Generate your next Twitter bio in seconds."
           />
-          <meta property="og:title" content="Pixel Art Profile Picture Generator" />
+          <meta property="og:title" content="Twitter Bio Generator" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Pixel Art Profile Picture Generator" />
+          <meta name="twitter:title" content="Twitter Bio Generator" />
           <meta
             name="twitter:description"
-            content="Generate your next Pixel Art Profile Picture in seconds."
+            content="Generate your next Twitter bio in seconds."
+          />
+          <meta
+            property="og:image"
+            content="https://twitterbio.io/og-image.png"
+          />
+          <meta
+            name="twitter:image"
+            content="https://twitterbio.io/og-image.png"
           />
         </Head>
         <body>
