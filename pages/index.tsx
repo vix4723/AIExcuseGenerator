@@ -12,14 +12,12 @@ import {
   ParsedEvent,
   ReconnectInterval,
 } from 'eventsource-parser';
-import Toggle from '../components/Toggle';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState('');
   const [vibe, setVibe] = useState<VibeType>('Professional');
   const [generatedBios, setGeneratedBios] = useState<String>('');
-  const [isGPT, setIsGPT] = useState(false);
 
   const bioRef = useRef<null | HTMLDivElement>(null);
 
@@ -29,13 +27,10 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 3 ${
-    vibe === 'Casual' ? 'relaxed' : vibe === 'Funny' ? 'silly' : 'Professional'
-  } original excuses with no hashtags and clearly labeled "1.", "2.", and "3.". Only return these 3 excuses, nothing else. ${
-    vibe === 'Funny' ? 'Make the excuses humerous' : ''
-  }Make sure each generated excuse is less than 300 characters, and feel free to use this context as well: ${bio}${
-    bio.slice(-1) === '.' ? '' : '.'
-  }`;
+  const prompt = `Generate 3 ${vibe === 'Casual' ? 'relaxed' : vibe === 'Funny' ? 'silly' : 'Professional'
+    } original excuses with no hashtags and clearly labeled "1.", "2.", and "3.". Only return these 3 excuses, nothing else. ${vibe === 'Funny' ? 'Make the excuses humerous' : ''
+    }Make sure each generated excuse is less than 300 characters, and feel free to use this context as well: ${bio}${bio.slice(-1) === '.' ? '' : '.'
+    }`;
 
   console.log({ prompt });
   console.log({ generatedBios });
@@ -44,7 +39,7 @@ const Home: NextPage = () => {
     e.preventDefault();
     setGeneratedBios('');
     setLoading(true);
-    const response = await fetch(isGPT ? '/api/openai' : '/api/mistral', {
+    const response = await fetch('/api/openai', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +53,6 @@ const Home: NextPage = () => {
       throw new Error(response.statusText);
     }
 
-    // This data is a ReadableStream
     const data = response.body;
     if (!data) {
       return;
@@ -76,24 +70,9 @@ const Home: NextPage = () => {
       }
     };
 
-    const onParseMistral = (event: ParsedEvent | ReconnectInterval) => {
-      if (event.type === 'event') {
-        const data = event.data;
-        try {
-          const text = JSON.parse(data).choices[0].text ?? '';
-          setGeneratedBios((prev) => prev + text);
-        } catch (e) {
-          console.error(e);
-        }
-      }
-    };
-
-    const onParse = isGPT ? onParseGPT : onParseMistral;
-
-    // https://web.dev/streams/#the-getreader-and-read-methods
     const reader = data.getReader();
     const decoder = new TextDecoder();
-    const parser = createParser(onParse);
+    const parser = createParser(onParseGPT);
     let done = false;
     while (!done) {
       const { value, done: doneReading } = await reader.read();
@@ -120,9 +99,6 @@ const Home: NextPage = () => {
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Generate your next excuse to successfully avoid your next commitment
         </h1>
-        <div className="mt-7">
-          <Toggle isGPT={isGPT} setIsGPT={setIsGPT} />
-        </div>
 
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
@@ -134,7 +110,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              In one sentence, tell me your current full-time job {' '}
+              In one sentence, tell me your current full-time job
             </p>
           </div>
           <textarea
