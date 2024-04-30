@@ -43,7 +43,7 @@ export default function Toggle({ isGPT, setIsGPT }: any) {
             !isGPT ? 'text-gray-400' : 'text-gray-900'
           }`}
         >
-          DALL-E
+          GPT-4
         </span>{' '}
         <Image
           src="/openai-logo.jpeg"
