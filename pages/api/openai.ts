@@ -18,16 +18,15 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   const payload: OpenAIStreamPayload = {
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: prompt }],
+    model: 'dall-e-2',
     temperature: 0.7,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
     max_tokens: 200,
-    stream: true,
-    n: 1,
+    n: 1,  // Number of images to generate.
   };
+
 
   const stream = await OpenAIStream(payload);
   // return stream response (SSE)
