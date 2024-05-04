@@ -24,11 +24,11 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://twitterbio.io/og-image.png"
+            content="https://excusegeneratorio.vercel.app/og-image.png"
           />
           <meta
             name="twitter:image"
-            content="https://twitterbio.io/og-image.png"
+            content="https://excusegeneratorio.vercel.app/og-image.png"
           />
         </Head>
         <body>
