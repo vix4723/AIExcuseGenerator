@@ -10,8 +10,8 @@ export default function Header() {
           src="/favicon.png"
           className="sm:w-9 sm:h-9 w-8 h-8"
         />
-        <h1 className="sm:text-3xl text-2xl font-bold ml-2 tracking-tight">
-          excusegenerator.io
+        <h1 className="sm:text-3xl text-2xl font-bold mr-1 tracking-tight">
+          AI Excuse Generator
         </h1>
       </Link>
     </header>

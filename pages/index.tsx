@@ -88,18 +88,20 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Original Excuse Generator</title>
+        <title>AI Excuse Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
-          <b>100</b> original excuses generated so far
-        </p>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Generate your next excuse to successfully avoid your next commitment
         </h1>
+        <div className='py-10'>
+        <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
+          <b>More than 100</b> original excuses generated so far
+        </p>
+        </div>
 
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
@@ -110,7 +112,7 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="mb-5 sm:mb-0"
             />
-            <p className="text-left font-medium">
+            <p className="text-center text-2x1">
               In one sentence, tell me your current full-time job
             </p>
           </div>
