@@ -1,9 +1,7 @@
-This project generates sophisticated excuses for you using AI. 
+Are you a Starbucks Enthusiast and undecided which drink you want next?
 
-I got inspired by the twitterbio.io website and attempted to create something similar (I loved the UI btw).
+If so, this website is for you.
 
 ## How it works
 
-This project uses and [GPT-4](https://openai.com/api/) with streaming to generate an excuse.
-
-I'll be eventually updating this version of the excuses generator.
+Just follow the directions and let the AI help you decide ;)

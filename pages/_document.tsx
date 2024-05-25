@@ -22,10 +22,10 @@ class MyDocument extends Document {
             content="Let me help you decide your next Starbucks drink"></meta>
           <meta
             property="og:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> {'Change the image'}
+            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> 
           <meta
             name="twitter:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> {'Change the image'}
+            content="https://excusegeneratorio.vercel.app/og-image.png"></meta>
         </Head>
         <body>
           <Main />
