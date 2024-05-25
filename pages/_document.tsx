@@ -9,7 +9,7 @@ class MyDocument extends Document {
           <meta
             name="description"
             content="Undecided with which Starbucks drink to choose?"></meta>
-          <meta property="og:site_name" content="https://excusegeneratorio.vercel.app/"></meta>
+          <meta property="og:site_name" content="https://www.nextstarbucksdrink.com/"></meta>
           <meta
             property="og:description"
             content="Let me help you decide your next Starbucks drink"></meta>
@@ -22,10 +22,10 @@ class MyDocument extends Document {
             content="Let me help you decide your next Starbucks drink"></meta>
           <meta
             property="og:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> 
+            content="https://www.nextstarbucksdrink.com/og-image.png"></meta> 
           <meta
             name="twitter:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta>
+            content="https://www.nextstarbucksdrink.com/og-image.png"></meta>
         </Head>
         <body>
           <Main />
