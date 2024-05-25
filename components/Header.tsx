@@ -11,7 +11,7 @@ export default function Header() {
           className="sm:w-9 sm:h-9 w-8 h-8"
         />
         <h1 className="sm:text-3xl text-2xl font-bold mr-1 tracking-tight font-mono">
-          Your To-Go Website to Create your Next Excuse
+          Find Your Next Starbucks Drink
         </h1>
         <img
           alt="header text"

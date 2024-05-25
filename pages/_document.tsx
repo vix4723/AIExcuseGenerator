@@ -8,24 +8,24 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.png" />
           <meta
             name="description"
-            content="Generate your best excuse to avoid your next commitment"></meta>
+            content="Undecided with which Starbucks drink to choose?"></meta>
           <meta property="og:site_name" content="https://excusegeneratorio.vercel.app/"></meta>
           <meta
             property="og:description"
-            content="Generate your best excuse to avoid your next commitment"></meta>
+            content="Let me help you decide your next Starbucks drink"></meta>
 
-          <meta property="og:title" content="AI Excuse Generator"></meta>
+          <meta property="og:title" content="Starbucks Drink Decider"></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:title" content="AI Excuse Generator"></meta>
+          <meta name="twitter:title" content="Starbucks Drink Decider"></meta>
           <meta
             name="twitter:description"
-            content="Generate your best excuse to avoid your next commitment"></meta>
+            content="Let me help you decide your next Starbucks drink"></meta>
           <meta
             property="og:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta>
+            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> {'Change the image'}
           <meta
             name="twitter:image"
-            content="https://excusegeneratorio.vercel.app/og-image.png"></meta>
+            content="https://excusegeneratorio.vercel.app/og-image.png"></meta> {'Change the image'}
         </Head>
         <body>
           <Main />
