@@ -103,16 +103,16 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center px-4 py-12 sm:py-20">
+      <main className="flex flex-1 w-full flex-col items-center justify-center px-8 sm:px-20 py-12 sm:py-20">
 
         <div className="flex flex-col items-center w-full max-w-5xl sm:flex-row">
           {/* Left Side */}
           <div className="flex flex-col items-center sm:items-start sm:w-1/2">
-            <h1 className="text-4xl sm:text-6xl font-bold text-slate-900 text-center sm:text-left">
-              Decide Your Next Starbucks Drink
+            <h1 className="text-4xl sm:text-6xl font-bold font-mono text-slate-900 text-center sm:text-left">
+              Are you unsure about what to get at Starbucks? 
             </h1>
             <div className='py-10 flex flex-col items-center sm:items-start'>
-              <p className="border rounded-2xl py-1 px-4 text-black-900 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
+              <p className="border rounded-xl py-1 px-6 text-black-900 text-m font-mono mb-5 hover:scale-105 transition duration-300 ease-in-out inline-block">
                 Helped more than <b>100</b> Starbucks customers choose their next drinks
               </p>
               <img
@@ -122,6 +122,8 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
+
+          <div className="w-px h-full bg-gray-300 mx-5"></div>
 
           {/* Right Side */}
           <div className="flex flex-col items-center justify-center w-full sm:w-1/2 mt-10 sm:mt-0">
@@ -150,7 +152,7 @@ const Home: NextPage = () => {
                   value={preferences.workload}
                   onChange={handleChange}
                   rows={1}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+                  className="w-full font-mono rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
                   placeholder={'e.g. just vibing with my friends'}
                 />
               </div>
@@ -164,7 +166,7 @@ const Home: NextPage = () => {
                   value={preferences.flavor}
                   onChange={handleChange}
                   rows={1}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+                  className="w-full rounded-md font-mono border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
                   placeholder={'e.g. mocha or vanilla'}
                 />
               </div>
@@ -178,13 +180,13 @@ const Home: NextPage = () => {
                   value={preferences.fan}
                   onChange={handleChange}
                   rows={1}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+                  className="w-full font-mono rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
                   placeholder={'e.g. Yes, No, Not Yet'}
                 />
               </div>
 
               <div>
-                <p className="text-left text-xl">
+                <p className="text-left text-xl font-mono">
                   <b>Question 5:</b> When do you assume that you will come back to Starbucks? Tomorrow? Next Week?
                 </p>
                 <textarea
@@ -192,13 +194,13 @@ const Home: NextPage = () => {
                   value={preferences.returnTime}
                   onChange={handleChange}
                   rows={1}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+                  className="w-full rounded-md font-mono border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
                   placeholder={'e.g. Tomorrow, Next Week, Next Month'}
                 />
               </div>
 
-              <div className="flex mb-5 text-xl items-center space-x-3">
-                <p className="text-left font-bold">What's your Starbucks Vibe?</p>
+              <div className="flex mb-5 text-xl font-mono items-center space-x-3">
+                <p className="text-left font-mono font-bold">What's your Starbucks Vibe?</p>
               </div>
               <div className="block">
                 <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
