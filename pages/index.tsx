@@ -118,7 +118,7 @@ const Home: NextPage = () => {
               <img
                 alt="Starbucks Coffee"
                 src="/favicon.png"
-                className="w-32 h-32 sm:w-64 sm:h-64"
+                className="w-64 h-64 sm:w-80 sm:h-80"
               />
             </div>
           </div>
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
             <div className="w-full max-w-xl">
 
               <div className="mt-10">
-                <p className="text-left text-xl">
+                <p className="text-left text-xl font-mono">
                   <b>Question 1:</b> Do you prefer coffee hot, iced, Frappuccino, or food?
                 </p>
                 <textarea
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
               </div>
 
               <div>
-                <p className="text-left text-xl">
+                <p className="text-left text-xl font-mono">
                   <b>Question 2:</b> Do you have a lot of work to do or are you just vibing?
                 </p>
                 <textarea
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
               </div>
 
               <div>
-                <p className="text-left text-xl">
+                <p className="text-left text-xl font-mono">
                   <b>Question 3:</b> Which flavor do you like the most based on your previous orders?
                 </p>
                 <textarea
@@ -170,7 +170,7 @@ const Home: NextPage = () => {
               </div>
 
               <div>
-                <p className="text-left text-xl">
+                <p className="text-left text-xl font-mono">
                   <b>Question 4:</b> Are you a Starbucks fan?
                 </p>
                 <textarea
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
                 />
               </div>
 
-              <div className="flex mb-5 items-center space-x-3">
+              <div className="flex mb-5 text-xl items-center space-x-3">
                 <p className="text-left font-bold">What's your Starbucks Vibe?</p>
               </div>
               <div className="block">
@@ -206,7 +206,7 @@ const Home: NextPage = () => {
 
               {!loading && (
                 <button
-                  className="bg-black rounded-xl text-white font-medium px-4 py-2 mt-8 hover:bg-black/80 w-full"
+                  className="bg-black rounded-xl text-white font-medium text-xl font-mono px-4 py-2 mt-8 hover:bg-black/80 w-full"
                   onClick={(e) => generateDrink(e)}
                 >
                   Let me decide for you &rarr;
