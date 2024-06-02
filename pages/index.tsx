@@ -236,13 +236,13 @@ const Home: NextPage = () => {
                 <>
                   <div>
                     <h2
-                      className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto text-center"
+                      className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto text-center font-mono"
                       ref={preferencesRef}
                     >
                       Your drink recommendations are here!
                     </h2>
                   </div>
-                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto font-mono">
                     {generatedDrinks
                       .substring(generatedDrinks.indexOf('1') + 3)
                       .split(/2\.|3\./)
