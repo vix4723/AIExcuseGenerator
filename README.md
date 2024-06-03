@@ -1,4 +1,4 @@
-#Next Starbucks Drink
+#Next Starbucks Drink#
 
 *Overview*
 Next Starbucks Drink is a fun and interactive website designed to help you decide your next Starbucks beverage based on your preferences and current mood. By answering a series of simple questions, the site provides a tailored drink recommendation to suit your taste and vibe.
