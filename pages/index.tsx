@@ -19,7 +19,7 @@ const Home: NextPage = () => {
     workload: '',
     flavor: '',
     fan: '',
-    returnTime: ''
+    personality: ''
   });
   const [vibe, setVibe] = useState<VibeType>('Professional');
   const [generatedDrinks, setGeneratedDrinks] = useState<String>('');
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     2. Workload: ${preferences.workload}. 
     3. Preferred flavor: ${preferences.flavor}. 
     4. Starbucks fan: ${preferences.fan}. 
-    5. Return time: ${preferences.returnTime}. 
+    5. Personality trait: ${preferences.personality}. 
     Make the recommendations less than 300 characters, and clearly labeled "1.", "2.", and "3.".`;
 
   const generateDrink = async (e: any) => {
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-emerald-400">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200">
       <Head>
         <title>Starbucks Drink Decider</title>
         <link rel="icon" href="/favicon.ico" />
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
           {/* Left Side */}
           <div className="flex flex-col items-center sm:items-start sm:w-1/2">
             <h1 className="text-4xl sm:text-6xl font-bold font-mono text-slate-900 text-center sm:text-left">
-              Are you unsure about what to get at Starbucks? 
+              Are you unsure about what to get at Starbucks?
             </h1>
             <div className='py-10 flex flex-col items-center sm:items-start'>
               <p className="border rounded-xl py-1 px-6 text-black-900 text-m font-mono mb-5 hover:scale-105 transition duration-300 ease-in-out inline-block">
@@ -187,22 +187,22 @@ const Home: NextPage = () => {
 
               <div>
                 <p className="text-left text-xl font-mono">
-                  <b>Question 5:</b> When do you assume that you will come back to Starbucks? Tomorrow? Next Week?
+                  <b>Question 5:</b> What is a key personality trait that defines you?
                 </p>
                 <textarea
-                  name="returnTime"
-                  value={preferences.returnTime}
+                  name="personality"
+                  value={preferences.personality}
                   onChange={handleChange}
                   rows={1}
                   className="w-full rounded-md font-mono border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
-                  placeholder={'e.g. Tomorrow, Next Week, Next Month'}
+                  placeholder={'e.g. adventurous, calm, funny'}
                 />
               </div>
 
               <div className="flex mb-5 text-xl font-mono items-center space-x-3">
                 <p className="text-left font-mono font-bold">What's your Starbucks Vibe?</p>
               </div>
-              <div className="block">
+              <div className="block font-mono">
                 <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
               </div>
 
